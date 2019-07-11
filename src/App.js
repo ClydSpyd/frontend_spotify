@@ -137,7 +137,7 @@ render() {
   return (
     
     <div className="App">
-      {this.state.token ? null : <a href="http://localhost:8888/login/"><span id='login' >Connect to app</span></a>}
+      {this.state.token ? null : <a href="https://spotifybackend101.herokuapp.com/login/"><span id='login' >Connect to app</span></a>}
       {/* {this.state.token ? null : <a href="http://localhost:8888/"><span id='login' >Connect to app</span></a>} */}
 
       {this.state.token ? 
