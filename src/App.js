@@ -3,6 +3,8 @@ import './App.css';
 import Spotify from '../node_modules/spotify-web-api-js';
 import Grid from './Grid';
 import TableRow from './Table';
+import Logo from './spotifyLogo.png';
+import Background from './defaultBG.png'
 
 const spotifyWebApi = new Spotify();
 
@@ -137,7 +139,18 @@ render() {
   return (
     
     <div className="App">
-      {this.state.token ? null : <a href="https://spotifybackend101.herokuapp.com/login/"><span id='login' >Connect to app</span></a>}
+      {this.state.token ? null : 
+      <React.Fragment>
+      	<div className="landingLogo">
+          {/* <img id='defaultBG' src={Background} alt=""/> */}
+          <img id='spotifyLogo' src={Logo} alt=""/>
+          <span class='topTracksText'><p id='top'>
+            Top
+          </p> Tunes</span>
+          <p class='connectText'>Connect to Spotify and discover your top tracks and artists</p>
+            <a href="https://spotifybackend101.herokuapp.com/login/"><span id='login' >Connect to app</span></a>
+        </div>
+      </React.Fragment>}
       {/* {this.state.token ? null : <a href="http://localhost:8888/"><span id='login' >Connect to app</span></a>} */}
 
       {this.state.token ? 
